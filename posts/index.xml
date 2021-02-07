@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on ME</title>
+    <link>/posts/</link>
+    <description>Recent content in Posts on ME</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2021 &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;C. Wang&lt;/a&gt; and &lt;a href=&#34;https://www.ruiqima.com/&#34;&gt;R. Ma&lt;/a&gt;
+</copyright>
+    <lastBuildDate>Mon, 17 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Generalized Linear Models</title>
+      <link>/posts/7-generalized-linear-models/</link>
+      <pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/7-generalized-linear-models/</guid>
+      <description>In my previous posts I have talked about linear and logistic regression. Today I will talk about the broader family of models to which both methods belong Generalized Linear Models. To work our way up to GLMs, we will begin by defining the exponential family.
+The exponential family: A class of distributions is in the exponential family if it can be written in the form:
+$$ p(y;\eta) = b(y) \text{exp}(\eta^T T(y) - \alpha(\eta)) $$
+ More information can be found here</description>
+    </item>
+    
+    <item>
+      <title>Logistic Regression</title>
+      <link>/posts/6-logistic-regression/</link>
+      <pubDate>Wed, 15 Jan 2020 20:24:51 +0100</pubDate>
+      
+      <guid>/posts/6-logistic-regression/</guid>
+      <description>Logistic regression Logistic regression unlike linear regression is well suited for classification type problems. The difference lies in the way data is fitted, instead of a linear (hyper)plane it is fitted using the following exponential function (also known as the sigmoid function):
+ \[\begin{aligned} h_{\theta}(x) = \dfrac{1}{1 + \exp{(-\theta^Tx)}} \end{aligned}\]  This function has the nice property that, its output is bound between zero and one. This is a usefull property when trying to model the (posterior) probability of something.</description>
+    </item>
+    
+    <item>
+      <title>Linear Regression</title>
+      <link>/posts/5-linear-regression/</link>
+      <pubDate>Sun, 12 Jan 2020 20:24:51 +0100</pubDate>
+      
+      <guid>/posts/5-linear-regression/</guid>
+      <description>The linear regression algorithm works by trying to predict the class label directly given an object. It tries to fit a (hyper)plane as good as possible through all the training examples, so that the output of the hyperplane $y$ predicts the class label. As you may have noticed the label $y$ will be predicted as a continuous value on the hyper plane. This makes it a pretty horrible fit for a (binary) classification problem, where the class label is discrete.</description>
+    </item>
+    
+    <item>
+      <title>Naive Bayes</title>
+      <link>/posts/4-naive-bayes/</link>
+      <pubDate>Wed, 25 Dec 2019 20:24:51 +0100</pubDate>
+      
+      <guid>/posts/4-naive-bayes/</guid>
+      <description>Naive Bayes All generative algorithms mentioned above try to model the multivariate class conditional distribution over all features. However when the shear amount of features becomes to large, the number of parameters needed to model the distribution will become infeasible in practice. A Gaussian function for example scales $O(n + n^2) \simeq O(n^2)$ with amount of features.
+The Naive Bayes classifier will therefore make a very strong assumption. All $x_i&amp;rsquo;s$ are considered conditionally independent given $y$.</description>
+    </item>
+    
+    <item>
+      <title>Non Parametric Algorithms</title>
+      <link>/posts/3-non-parmetric-algorithms/</link>
+      <pubDate>Sun, 22 Dec 2019 20:24:51 +0100</pubDate>
+      
+      <guid>/posts/3-non-parmetric-algorithms/</guid>
+      <description>As we have seen with the QDA and LDA classifiers, it is possible to obtain the posterior probabilities by estimating the class conditional probabilities using a (multivariate) Gaussian distribution. Here we estimated the parameters of the Gaussian distribution, $\mu$ and $\Sigma$ based on set of (unbiased) examples.
+Instead of using this parametric approach, it is also possible to estimate the class conditional probabilities using Kernel density estimation
+Kernel density estimation: Here the main idea is that you approximate the distribution by a mixture of continuous distributions called kernels.</description>
+    </item>
+    
+    <item>
+      <title>Gaussian Discriminative Analysis</title>
+      <link>/posts/2-gaussian-discriminative-analysis/</link>
+      <pubDate>Fri, 20 Dec 2019 20:24:51 +0100</pubDate>
+      
+      <guid>/posts/2-gaussian-discriminative-analysis/</guid>
+      <description>The Gaussian discriminate analysis is a generative learning algorithm which models the PDF using a (multivariate) Gaussian distribution. This class of density estimation is also called parametric density estimation.
+Parametric Density Estimation: To get an idea of the underlying distribution of the features we try to estimate this distribution based on a formula with parameters. Most commenly used formula for parametric density estimation is the Gaussian distribution:
+1D Gaussian
+ \[\begin{aligned} \mathcal{N}(\mu, \sigma^{2}) = \dfrac{1}{\sigma \sqrt{2\pi}} \exp{(-\dfrac{1}{2} ( \dfrac{x-\mu}{\sigma})^{2})} \end{aligned}\]  Multivariate Gaussian</description>
+    </item>
+    
+    <item>
+      <title>Machine Learning</title>
+      <link>/posts/1-machine-learning/</link>
+      <pubDate>Sun, 24 Nov 2019 20:24:51 +0100</pubDate>
+      
+      <guid>/posts/1-machine-learning/</guid>
+      <description>A big part of machine learning consist of the detection of patterns in data. A dataset is represented as a collection of features. For example a dataset about fruits could contain features about color, volume, weight and so on. By detecting the patterns in the features, objects in the dataset can be classified as belonging to a certain class. For example in the fruits dataset each fruit object can be classified as apple, banana, peer and so on.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/8-support-vector-machines/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/8-support-vector-machines/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

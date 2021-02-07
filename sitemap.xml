@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/posts/7-generalized-linear-models/</loc>
+    <lastmod>2020-02-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-02-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2020-02-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/6-logistic-regression/</loc>
+    <lastmod>2020-01-15T20:24:51+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/5-linear-regression/</loc>
+    <lastmod>2020-01-12T20:24:51+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/4-naive-bayes/</loc>
+    <lastmod>2019-12-25T20:24:51+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/3-non-parmetric-algorithms/</loc>
+    <lastmod>2019-12-22T20:24:51+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2-gaussian-discriminative-analysis/</loc>
+    <lastmod>2019-12-20T20:24:51+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/1-machine-learning/</loc>
+    <lastmod>2019-11-24T20:24:51+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/8-support-vector-machines/</loc>
+  </url>
+  
+  <url>
+    <loc>/authors/</loc>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>/authors/new-author/</loc>
+  </url>
+  
+  <url>
+    <loc>/series/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+  </url>
+  
+</urlset>
