@@ -50,7 +50,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_2.png">
 
 <meta name="description"
-  content="As we have seen with the QDA and LDA classifiers, it is possible to obtain the posterior probabilities by estimating the class conditional probabilities using a (multivariate) Gaussian distribution. Here we estimated the parameters of the Gaussian distribution, $\mu$ and $\Sigma$ based on set of (unbiased) examples.
+  content="As we have seen with the QDA and LDA classifiers, it is possible to obtain the posterior probabilities by estimating the class conditional probabilities using a (multivariate) Gaussian distribution. And we estimated the parameters of the Gaussian distribution, $\mu$ and $\Sigma$ based on set of (unbiased) examples.
 Instead of using this parametric approach, it is also possible to estimate the class conditional probabilities using Kernel density estimation
 Kernel density estimation: Here the main idea is that you approximate the distribution by a mixture of continuous distributions called kernels.">
 <script type="application/ld+json">
@@ -90,7 +90,7 @@ Kernel density estimation: Here the main idea is that you approximate the distri
             "url": "/images/icon.png"
         }
         },
-    "description": "As we have seen with the QDA and LDA classifiers, it is possible to obtain the posterior probabilities by estimating the class conditional probabilities using a (multivariate) Gaussian distribution. Here we estimated the parameters of the Gaussian distribution, $\\mu$ and $\\Sigma$ based on set of (unbiased) examples.\nInstead of using this parametric approach, it is also possible to estimate the class conditional probabilities using Kernel density estimation\nKernel density estimation: Here the main idea is that you approximate the distribution by a mixture of continuous distributions called kernels."
+    "description": "As we have seen with the QDA and LDA classifiers, it is possible to obtain the posterior probabilities by estimating the class conditional probabilities using a (multivariate) Gaussian distribution. And we estimated the parameters of the Gaussian distribution, $\\mu$ and $\\Sigma$ based on set of (unbiased) examples.\nInstead of using this parametric approach, it is also possible to estimate the class conditional probabilities using Kernel density estimation\nKernel density estimation: Here the main idea is that you approximate the distribution by a mixture of continuous distributions called kernels."
 }
 </script><meta property="og:title" content="Non Parametric Algorithms | ME" />
 <meta property="og:type" content="article" />
@@ -104,7 +104,7 @@ Kernel density estimation: Here the main idea is that you approximate the distri
 
 
 
-<meta property="og:description" content="As we have seen with the QDA and LDA classifiers, it is possible to obtain the posterior probabilities by estimating the class conditional probabilities using a (multivariate) Gaussian distribution. Here we estimated the parameters of the Gaussian distribution, $\mu$ and $\Sigma$ based on set of (unbiased) examples.
+<meta property="og:description" content="As we have seen with the QDA and LDA classifiers, it is possible to obtain the posterior probabilities by estimating the class conditional probabilities using a (multivariate) Gaussian distribution. And we estimated the parameters of the Gaussian distribution, $\mu$ and $\Sigma$ based on set of (unbiased) examples.
 Instead of using this parametric approach, it is also possible to estimate the class conditional probabilities using Kernel density estimation
 Kernel density estimation: Here the main idea is that you approximate the distribution by a mixture of continuous distributions called kernels." />
 
@@ -227,7 +227,7 @@ Kernel density estimation: Here the main idea is that you approximate the distri
         
 
         <div class="content">
-            <p>As we have seen with the QDA and LDA classifiers, it is possible to obtain the posterior probabilities by estimating the class conditional probabilities using a (multivariate) Gaussian distribution. Here we estimated the parameters of the Gaussian distribution, <strong>$\mu$</strong> and <strong>$\Sigma$</strong> based on set of (unbiased) examples.</p>
+            <p>As we have seen with the QDA and LDA classifiers, it is possible to obtain the posterior probabilities by estimating the class conditional probabilities using a (multivariate) Gaussian distribution. And we estimated the parameters of the Gaussian distribution, <strong>$\mu$</strong> and <strong>$\Sigma$</strong> based on set of (unbiased) examples.</p>
 <p>Instead of using this parametric approach, it is also possible to estimate the class conditional probabilities using <strong>Kernel density estimation</strong></p>
 <p><strong><em>Kernel density estimation:</em></strong> Here the main idea is that you approximate the distribution by a mixture of continuous distributions called kernels.</p>
 <h3 id="histogram-density-estimation">Histogram Density Estimation</h3>
@@ -238,8 +238,7 @@ samples.</p>
     p(x|y_i) = \dfrac{1}{h} \dfrac{k_i}{n_i}
 \end{aligned}\]
 </div>
-<p>The downside of the histogram method is that the feature space is discretely separated in bins. Therefore the estimated density will not be continuous throughout the feature space. Decreasing the bin size on the other hand
-causes problems in sparse datasets.</p>
+<p>The downside of the histogram method is that the feature space is discretely separated in bins. Therefore the estimated density will not be continuous throughout the feature space. Decreasing the bin size on the other hand causes problems in sparse datasets.</p>
 <h3 id="parzen-density-estimation">Parzen Density Estimation</h3>
 <p>In parzen density estimation, kernels are centered at every datatpoint $x_i$. The class conditional probability is the normalized sum of these kernels.</p>
 <div>

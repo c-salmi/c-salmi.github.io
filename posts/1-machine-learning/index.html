@@ -50,7 +50,8 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_2.png">
 
 <meta name="description"
-  content="A big part of machine learning consist of the detection of patterns in data. A dataset is represented as a collection of features. For example a dataset about fruits could contain features about color, volume, weight and so on. By detecting the patterns in the features, objects in the dataset can be classified as belonging to a certain class. For example in the fruits dataset each fruit object can be classified as apple, banana, peer and so on.">
+  content="Hello world, this is the first in a series of posts about machine learning. I&rsquo;m mostly making these posts for fun and to go through the basics again, wipe away the dust. I aspire to always think from first principles, so knowing the first principles might come in handy some time.
+So lets talk about machine learning &hellip; Machin learning basically consists of the detection of pattern in data. Data usually refers to a collection of features and classes.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -79,7 +80,7 @@
     },
     "headline": "Machine Learning | ME","datePublished": "2019-11-24T20:24:51+01:00",
     "dateModified": "2019-11-24T20:24:51+01:00",
-    "wordCount":  723 ,
+    "wordCount":  621 ,
     "publisher": {
         "@type": "Person",
         "name": "C. Wang",
@@ -88,7 +89,7 @@
             "url": "/images/icon.png"
         }
         },
-    "description": "A big part of machine learning consist of the detection of patterns in data. A dataset is represented as a collection of features. For example a dataset about fruits could contain features about color, volume, weight and so on. By detecting the patterns in the features, objects in the dataset can be classified as belonging to a certain class. For example in the fruits dataset each fruit object can be classified as apple, banana, peer and so on."
+    "description": "Hello world, this is the first in a series of posts about machine learning. I\u0026rsquo;m mostly making these posts for fun and to go through the basics again, wipe away the dust. I aspire to always think from first principles, so knowing the first principles might come in handy some time.\nSo lets talk about machine learning \u0026hellip; Machin learning basically consists of the detection of pattern in data. Data usually refers to a collection of features and classes."
 }
 </script><meta property="og:title" content="Machine Learning | ME" />
 <meta property="og:type" content="article" />
@@ -102,7 +103,8 @@
 
 
 
-<meta property="og:description" content="A big part of machine learning consist of the detection of patterns in data. A dataset is represented as a collection of features. For example a dataset about fruits could contain features about color, volume, weight and so on. By detecting the patterns in the features, objects in the dataset can be classified as belonging to a certain class. For example in the fruits dataset each fruit object can be classified as apple, banana, peer and so on." />
+<meta property="og:description" content="Hello world, this is the first in a series of posts about machine learning. I&rsquo;m mostly making these posts for fun and to go through the basics again, wipe away the dust. I aspire to always think from first principles, so knowing the first principles might come in handy some time.
+So lets talk about machine learning &hellip; Machin learning basically consists of the detection of pattern in data. Data usually refers to a collection of features and classes." />
 
 
 
@@ -211,7 +213,7 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>4 min read</span>
+        <span>3 min read</span>
     </div>
     
     
@@ -223,27 +225,20 @@
         
 
         <div class="content">
-            <p>A big part of machine learning consist of the detection of patterns in data. A dataset is represented as a collection of features. For example a dataset about fruits could contain features about color, volume, weight and so on. By detecting the patterns in the features, objects in the dataset can be classified as belonging to a certain class. For example in the fruits dataset each fruit object can be classified as apple, banana, peer and so on.</p>
+            <p>Hello world, this is the first in a series of posts about machine learning. I&rsquo;m mostly making these posts for fun and to go through the basics again, wipe away the dust. I aspire to always think from first principles, so knowing the first principles might come in handy some time.</p>
+<p>So lets talk about machine learning &hellip; Machin learning basically consists of the detection of pattern in data. Data usually refers to a collection of features and classes. For example a dataset about fruits could contain features about color, volume, weight and so on. By detecting the patterns in the features, objects in the dataset can be classified as belonging to a certain class. For example in the fruits dataset each fruit object can be classified as apple, banana, peer and so on.</p>
 <p>Object classification is usually done based on recognising the patterns in a <strong>labled</strong> dataset. By making the assumption that objects within the same class share a similar patter in their features, it is possible to generalise new unseen objects. This is also called <strong>Supervised learning</strong>, which this blog will be moslty focused on.</p>
 <h2 id="iris-classification-example">Iris classification example</h2>
-<p>Practical examples are really helpful to go from a theoretical understanding to actually being able to implement some of the material you learned. Therefore I will be going through most of the theorie with a small example dataset. The dataset I will be using is called Fishers' Iris data set, which was introduced in Fisher&rsquo;s paper in 1936 and is one of the first published instances of machine learning. It is a rather small dataset consisting of 3 different flower types and 50 examples of each flower type. The 3 classes are Iris-Setosa, Iris-Versicolour, Iris-Virginica. And the 4 features are sepal length, sepal width, petal length, petal width all in cm.</p>
-<h2 id="generative-learning-algorithms">Generative learning algorithms</h2>
-<p>In order to classify an unknown clothing piece $x$ as class $y_i$ (T-shirt/Top, Trouser, Pullover, Sneaker …) we need to know what the probability is that $x$ is of class $y_i$. This means we need to know all the:</p>
+<p>I find that I learn more efficiently by doing. So there will be some practical examples mixed in these posts. For my first practical example I&rsquo;ll use the classic, Fisher&rsquo;s Iris data set, which he introduced in 1936! It is a rather small dataset consisting of 3 different flower types and 50 examples of each flower type. The 3 classes are Iris-Setosa, Iris-Versicolour, Iris-Virginica. And the 4 features are sepal length, sepal width, petal length, petal width all in cm.</p>
+<p><img src="/images/iris.png" alt="img"></p>
+<h2 id="probability-theory">Probability theory</h2>
+<p>In order to classify an unknown flower $x$ as class $y_i$ (setosa, versicolour, virginica) we need to know what the probability is that $x$ is of class $y_i$. This means we need to know all the:</p>
 <div>
 \[\begin{aligned}
   \text{Class posterior probabilities} : p(y_i|x).
 \end{aligned}\]
 </div>
-<p>Once we have all the posterior probabilities we can predict (classify) the class of a given clothing piece $x$ by maximizing the posterior probability. The same principle holds for a regression problem, where $y$ will be continuous.</p>
-<p>Generative learning algorithms try to model the underlying <strong>Class conditional distribution</strong> of each class.
-This distribution can intuitively be thought of as the distribution of which samples of the corresponding class are generated from.</p>
-<div>
-\[\begin{aligned}
-  \text{Class conditional distribution} : p(x|y_i)
-\end{aligned}\]
-</div>
-<p>To make a prediction however you need the posterior probabilities, therefore <strong>Bayes' theorem</strong> is used
-,which is further explained below.</p>
+<p>Once we have all the posterior probabilities we can predict (classify) the species of a given flower $x$ by maximizing the posterior probability. The same principle holds for a regression problem, where $y$ is continuous.</p>
 <h3 id="bayes-theorem">Bayes' theorem</h3>
 <div>
 \[\begin{aligned}
@@ -263,41 +258,20 @@ This distribution can intuitively be thought of as the distribution of which sam
     p(x) = \sum_{i=1}^i p(x|y_i)*p(y_i)
 \end{aligned}\]
 </div>
-<h2 id="discriminative-learning-algorithms">Discriminative learning algorithms</h2>
-<p>Up until now we have seen a number of different algorithms which estimate the <strong>class conditional distribution</strong> and use <strong>Bayes' rule</strong>
-to compute the posterior probabilities needed for prediction.</p>
-<p>These types of algorithms are called <strong>generative algorithms</strong> because they try to learn the model that generates the data
-behind the scenes.</p>
-<p><strong>Discriminative algorithms</strong> model the posterior probabilities from training examples directly. It makes fewer assumptions
-on the distributions but depends heavily on the
-quality of the data.</p>
-<!-- ### TODO Generalized linear models -->
-<p><a id="org8bd234c"></a></p>
-<h4 id="introduction">Introduction</h4>
-<p><a id="org806a558"></a></p>
-<h4 id="softmax">Softmax</h4>
-<p><a id="org33d63c1"></a></p>
-<h3 id="support-vector-machines">Support Vector Machines</h3>
-<p><a id="org21b2608"></a></p>
-<h4 id="introduction-1">Introduction</h4>
-<p><a id="orgc7a745b"></a></p>
-<h4 id="functional-and-geometric-margins">Functional and geometric margins</h4>
-<p>To gain some intuition about how SVM work and how they are different from the before seen generalized linear models, we will
-first take a look at functional and geometric margins. The main idea behind the &lsquo;margin&rsquo; is to maximize the distance between
-classes using your decision boundary.</p>
-<p>For example given we are using a linear (hyper)plane as our decision boundary, we want to maximize the distance to the closest
-training example from our decision plane:</p>
+<h2 id="generative-learning-algorithms">Generative learning algorithms</h2>
+<p>Generative learning algorithms try to model the underlying <strong>Class conditional distribution</strong> of each class.
+This distribution can intuitively be thought of as the distribution of which samples of the corresponding class are generated from.</p>
 <div>
 \[\begin{aligned}
-   \hat{\gamma}^{(i)} = y^{(i)}(w^T x^{(i)} + b)
+  \text{Class conditional distribution} : p(x|y_i)
 \end{aligned}\]
 </div>
-<p><a id="org0cbdae3"></a></p>
-<h4 id="todo-optimal-margin-classifier">TODO Optimal margin classifier</h4>
-<p><a id="org37c76ce"></a></p>
-<h4 id="todo-lagrange-duality">TODO Lagrange duality</h4>
-<p><a id="org1763cb1"></a></p>
-<h4 id="todo-kernels---">TODO Kernels &ndash;&gt;</h4>
+<p>To make a prediction however you need the posterior probabilities, therefore <strong>Bayes' theorem</strong> is used.</p>
+<h2 id="discriminative-learning-algorithms">Discriminative learning algorithms</h2>
+<p><strong>Discriminative algorithms</strong> model the posterior probabilities from training examples directly. It makes fewer assumptions
+on the distributions but depends heavily on the quality of the data.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>I&rsquo;ve shortly introduced the supervised machine learning and talked about the two distinct ways to tackle learning algorithms. In future posts I&rsquo;ll go more in depth in certain algorithms and explain their advantages / disadvantages.</p>
 
         </div>
         
@@ -315,9 +289,6 @@ training example from our decision plane:</p>
         
     </div>
     <div class="md:text-right mt-4 md:mt-0">
-        
-        <span class="block font-bold">Next</span>
-        <a href="/posts/8-support-vector-machines/" class="block"></a>
         
     </div>
 </div>

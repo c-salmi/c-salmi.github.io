@@ -62,21 +62,21 @@
     "itemListElement":[{
             "@type":"ListItem",
             "position":  1 ,
+            "name": "Linear Regression",
+            "description": "The linear regression algorithm works by trying to predict the class label directly given an object. It tries to fit a (hyper)plane as good as possible through all the training examples, so that the output of the hyperplane $y$ predicts the class label. As you may have noticed the label $y$ will be predicted as a continuous value on the hyper plane. This makes it a pretty horrible fit for a (binary) classification problem, where the class label is discrete.",
+            "url": "/posts/5-linear-regression/"
+        },{
+            "@type":"ListItem",
+            "position":  2 ,
             "name": "Naive Bayes",
             "description": "Naive Bayes All generative algorithms mentioned above try to model the multivariate class conditional distribution over all features. However when the shear amount of features becomes to large, the number of parameters needed to model the distribution will become infeasible in practice. A Gaussian function for example scales $O(n + n^2) \\simeq O(n^2)$ with amount of features.\nThe Naive Bayes classifier will therefore make a very strong assumption. All $x_i\u0026rsquo;s$ are considered conditionally independent given $y$.",
             "url": "/posts/4-naive-bayes/"
         },{
             "@type":"ListItem",
-            "position":  2 ,
-            "name": "Non Parametric Algorithms",
-            "description": "As we have seen with the QDA and LDA classifiers, it is possible to obtain the posterior probabilities by estimating the class conditional probabilities using a (multivariate) Gaussian distribution. Here we estimated the parameters of the Gaussian distribution, $\\mu$ and $\\Sigma$ based on set of (unbiased) examples.\nInstead of using this parametric approach, it is also possible to estimate the class conditional probabilities using Kernel density estimation\nKernel density estimation: Here the main idea is that you approximate the distribution by a mixture of continuous distributions called kernels.",
-            "url": "/posts/3-non-parmetric-algorithms/"
-        },{
-            "@type":"ListItem",
             "position":  3 ,
-            "name": "Gaussian Discriminative Analysis",
-            "description": "The Gaussian discriminate analysis is a generative learning algorithm which models the PDF using a (multivariate) Gaussian distribution. This class of density estimation is also called parametric density estimation.\nParametric Density Estimation: To get an idea of the underlying distribution of the features we try to estimate this distribution based on a formula with parameters. Most commenly used formula for parametric density estimation is the Gaussian distribution:\n1D Gaussian\n \\[\\begin{aligned} \\mathcal{N}(\\mu, \\sigma^{2}) = \\dfrac{1}{\\sigma \\sqrt{2\\pi}} \\exp{(-\\dfrac{1}{2} ( \\dfrac{x-\\mu}{\\sigma})^{2})} \\end{aligned}\\]  Multivariate Gaussian",
-            "url": "/posts/2-gaussian-discriminative-analysis/"
+            "name": "Non Parametric Algorithms",
+            "description": "As we have seen with the QDA and LDA classifiers, it is possible to obtain the posterior probabilities by estimating the class conditional probabilities using a (multivariate) Gaussian distribution. And we estimated the parameters of the Gaussian distribution, $\\mu$ and $\\Sigma$ based on set of (unbiased) examples.\nInstead of using this parametric approach, it is also possible to estimate the class conditional probabilities using Kernel density estimation\nKernel density estimation: Here the main idea is that you approximate the distribution by a mixture of continuous distributions called kernels.",
+            "url": "/posts/3-non-parmetric-algorithms/"
         }
     ]
 }
@@ -111,7 +111,7 @@
 
 
 
-<meta property="og:updated_time" content="2020-02-17T00:00:00&#43;00:00" />
+<meta property="og:updated_time" content="2021-01-01T00:00:00&#43;00:00" />
 
 
 
@@ -199,6 +199,38 @@
   
   <div class="w-full ">
     <div class="mb-4">
+  <a href="/posts/5-linear-regression/" class="font-bold text-xl hover:text-eureka">Linear Regression</a>
+</div>
+<div class="content">
+  The linear regression algorithm works by trying to predict the class label directly given an object. It tries to fit a (hyper)plane as good as possible through all the training examples, so that the output of the hyperplane $y$ predicts the class label. As you may have noticed the label $y$ will be predicted as a continuous value on the hyper plane. This makes it a pretty horrible fit for a (binary) classification problem, where the class label is discrete.
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2020-01-12</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>4 min read</span>
+    </div>
+    
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
   <a href="/posts/4-naive-bayes/" class="font-bold text-xl hover:text-eureka">Naive Bayes</a>
 </div>
 <div class="content">
@@ -235,7 +267,7 @@ The Naive Bayes classifier will therefore make a very strong assumption. All $x_
   <a href="/posts/3-non-parmetric-algorithms/" class="font-bold text-xl hover:text-eureka">Non Parametric Algorithms</a>
 </div>
 <div class="content">
-  As we have seen with the QDA and LDA classifiers, it is possible to obtain the posterior probabilities by estimating the class conditional probabilities using a (multivariate) Gaussian distribution. Here we estimated the parameters of the Gaussian distribution, $\mu$ and $\Sigma$ based on set of (unbiased) examples.
+  As we have seen with the QDA and LDA classifiers, it is possible to obtain the posterior probabilities by estimating the class conditional probabilities using a (multivariate) Gaussian distribution. And we estimated the parameters of the Gaussian distribution, $\mu$ and $\Sigma$ based on set of (unbiased) examples.
 Instead of using this parametric approach, it is also possible to estimate the class conditional probabilities using Kernel density estimation
 Kernel density estimation: Here the main idea is that you approximate the distribution by a mixture of continuous distributions called kernels.
 </div>
@@ -244,41 +276,6 @@ Kernel density estimation: Here the main idea is that you approximate the distri
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
         <span>2019-12-22</span>
-    </div>
-    <div class="mr-6 my-2">
-        <i class="fas fa-clock mr-1"></i>
-        <span>3 min read</span>
-    </div>
-    
-    
-
-    
-</div>
-
-  </div>
-
-  
-</div>
-  </div>
-  
-  <div class="py-6">
-    <div class="flex flex-col-reverse lg:flex-row justify-between">
-  
-  <div class="w-full ">
-    <div class="mb-4">
-  <a href="/posts/2-gaussian-discriminative-analysis/" class="font-bold text-xl hover:text-eureka">Gaussian Discriminative Analysis</a>
-</div>
-<div class="content">
-  The Gaussian discriminate analysis is a generative learning algorithm which models the PDF using a (multivariate) Gaussian distribution. This class of density estimation is also called parametric density estimation.
-Parametric Density Estimation: To get an idea of the underlying distribution of the features we try to estimate this distribution based on a formula with parameters. Most commenly used formula for parametric density estimation is the Gaussian distribution:
-1D Gaussian
- \[\begin{aligned} \mathcal{N}(\mu, \sigma^{2}) = \dfrac{1}{\sigma \sqrt{2\pi}} \exp{(-\dfrac{1}{2} ( \dfrac{x-\mu}{\sigma})^{2})} \end{aligned}\]  Multivariate Gaussian
-</div>
-
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-    <div class="mr-6 my-2">
-        <i class="fas fa-calendar mr-1"></i>
-        <span>2019-12-20</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>

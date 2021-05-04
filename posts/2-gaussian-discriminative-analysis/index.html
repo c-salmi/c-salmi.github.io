@@ -50,10 +50,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_2.png">
 
 <meta name="description"
-  content="The Gaussian discriminate analysis is a generative learning algorithm which models the PDF using a (multivariate) Gaussian distribution. This class of density estimation is also called parametric density estimation.
-Parametric Density Estimation: To get an idea of the underlying distribution of the features we try to estimate this distribution based on a formula with parameters. Most commenly used formula for parametric density estimation is the Gaussian distribution:
-1D Gaussian
- \[\begin{aligned} \mathcal{N}(\mu, \sigma^{2}) = \dfrac{1}{\sigma \sqrt{2\pi}} \exp{(-\dfrac{1}{2} ( \dfrac{x-\mu}{\sigma})^{2})} \end{aligned}\]  Multivariate Gaussian">
+  content="If I sample many many apples from a basket of independent identically distributed (i.i.d.) randomly sized appels, the distribution of the size of my apples will converge towards the Gaussian distribution. This is what Laplace came up with in 1812, in his “Analytic Theory of Probability”. Although Carl Friedrich Gauss 3 years before that already introduced the function and worked out the least squares approximation to estimate the &lsquo;true&rsquo; (mean) value from a bunch of i.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -82,7 +79,7 @@ Parametric Density Estimation: To get an idea of the underlying distribution of 
     },
     "headline": "Gaussian Discriminative Analysis | ME","datePublished": "2019-12-20T20:24:51+01:00",
     "dateModified": "2019-12-20T20:24:51+01:00",
-    "wordCount":  561 ,
+    "wordCount":  909 ,
     "publisher": {
         "@type": "Person",
         "name": "C. Wang",
@@ -91,7 +88,7 @@ Parametric Density Estimation: To get an idea of the underlying distribution of 
             "url": "/images/icon.png"
         }
         },
-    "description": "The Gaussian discriminate analysis is a generative learning algorithm which models the PDF using a (multivariate) Gaussian distribution. This class of density estimation is also called parametric density estimation.\nParametric Density Estimation: To get an idea of the underlying distribution of the features we try to estimate this distribution based on a formula with parameters. Most commenly used formula for parametric density estimation is the Gaussian distribution:\n1D Gaussian\n \\[\\begin{aligned} \\mathcal{N}(\\mu, \\sigma^{2}) = \\dfrac{1}{\\sigma \\sqrt{2\\pi}} \\exp{(-\\dfrac{1}{2} ( \\dfrac{x-\\mu}{\\sigma})^{2})} \\end{aligned}\\]  Multivariate Gaussian"
+    "description": "If I sample many many apples from a basket of independent identically distributed (i.i.d.) randomly sized appels, the distribution of the size of my apples will converge towards the Gaussian distribution. This is what Laplace came up with in 1812, in his “Analytic Theory of Probability”. Although Carl Friedrich Gauss 3 years before that already introduced the function and worked out the least squares approximation to estimate the \u0026lsquo;true\u0026rsquo; (mean) value from a bunch of i."
 }
 </script><meta property="og:title" content="Gaussian Discriminative Analysis | ME" />
 <meta property="og:type" content="article" />
@@ -105,10 +102,7 @@ Parametric Density Estimation: To get an idea of the underlying distribution of 
 
 
 
-<meta property="og:description" content="The Gaussian discriminate analysis is a generative learning algorithm which models the PDF using a (multivariate) Gaussian distribution. This class of density estimation is also called parametric density estimation.
-Parametric Density Estimation: To get an idea of the underlying distribution of the features we try to estimate this distribution based on a formula with parameters. Most commenly used formula for parametric density estimation is the Gaussian distribution:
-1D Gaussian
- \[\begin{aligned} \mathcal{N}(\mu, \sigma^{2}) = \dfrac{1}{\sigma \sqrt{2\pi}} \exp{(-\dfrac{1}{2} ( \dfrac{x-\mu}{\sigma})^{2})} \end{aligned}\]  Multivariate Gaussian" />
+<meta property="og:description" content="If I sample many many apples from a basket of independent identically distributed (i.i.d.) randomly sized appels, the distribution of the size of my apples will converge towards the Gaussian distribution. This is what Laplace came up with in 1812, in his “Analytic Theory of Probability”. Although Carl Friedrich Gauss 3 years before that already introduced the function and worked out the least squares approximation to estimate the &lsquo;true&rsquo; (mean) value from a bunch of i." />
 
 
 
@@ -217,7 +211,7 @@ Parametric Density Estimation: To get an idea of the underlying distribution of 
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>3 min read</span>
+        <span>5 min read</span>
     </div>
     
     
@@ -229,8 +223,7 @@ Parametric Density Estimation: To get an idea of the underlying distribution of 
         
 
         <div class="content">
-            <p>The Gaussian discriminate analysis is a generative learning algorithm which models the PDF using a (multivariate) Gaussian distribution. This class of density estimation is also called parametric density estimation.</p>
-<p><strong><em>Parametric Density Estimation</em></strong>: To get an idea of the underlying distribution of the features we try to estimate this distribution based on a formula with parameters. Most commenly used formula for parametric density estimation is the Gaussian distribution:</p>
+            <p>If I sample many many apples from a basket of independent identically distributed (i.i.d.) randomly sized appels, the distribution of the size of my apples will converge towards the Gaussian distribution. This is what Laplace came up with in 1812, in his “Analytic Theory of Probability”. Although Carl Friedrich Gauss 3 years before that already introduced the function and worked out the least squares approximation to estimate the &lsquo;true&rsquo; (mean) value from a bunch of i.i.d. measurements (very usefull in statistics / confidence calculations).</p>
 <p><strong>1D Gaussian</strong></p>
 <div>
 \[\begin{aligned}
@@ -238,6 +231,12 @@ Parametric Density Estimation: To get an idea of the underlying distribution of 
 \end{aligned}\]
 </div>
 <p><img src="/images/Gauss1D.png" alt="img"></p>
+<p>Now lets get back to machine learning &hellip;. We can use a the Gaussian distribution to model the PDF of features. And if you remember, we can use Bayes' theorom to caculate the posterior distribution from the PDF and so we can make a prediction algorithm!</p>
+<p><strong><em>Parametric Density Estimation</em></strong>: To get an idea of the underlying distribution of the features we try to estimate this distribution based on a formula with parameters. Most commenly used formula for parametric density estimation is the Gaussian distribution:</p>
+<h3 id="quadratic-discriminate-analysis">Quadratic discriminate analysis</h3>
+<p>Lets say we only have two features of Fishers' Iris dataset available, for example petal length and sepal length and we are only dealing with two species instead of three (making the example as easy as possible to visualize it).</p>
+<p><img src="/images/small_iris.png" alt="img"></p>
+<p>The Quadratic discriminate analysis is an algorithm that predicts the species based on the two features. This does require the multivariate version of the Gaussian so let&rsquo;s have a look:</p>
 <p><strong>Multivariate Gaussian</strong></p>
 <div>
 \[\begin{aligned}
@@ -245,9 +244,7 @@ Parametric Density Estimation: To get an idea of the underlying distribution of 
 \end{aligned}\]
 </div>
 <p><img src="/images/Gauss2D.png" alt="img"></p>
-<h3 id="quadratic-discriminate-analysis">Quadratic discriminate analysis</h3>
-<p>Quadratic discriminate analysis is a form of GDA where the class conditional probability of each class is modeled using individual gaussians, which means that $\sigma$ of each class are not necessarily the same.</p>
-<p>In binary (two class) QDA the classification is based on the discriminant:</p>
+<p>In binary (two species) QDA the classification is based on the discriminant:</p>
 <div>
 \[\begin{aligned}
     f(x) = \text{log} \ p(y_1 | x) - \text{ log } \ p(y_2 | x)
@@ -291,9 +288,10 @@ linear:</p>
 \end{aligned}\]
 </div>
 <p>Also called Fisher&rsquo;s Linear Discriminate analysis.</p>
-<h4 id="lda-example">LDA example</h4>
-<p><img src="/images/MNIST_mean_std_plot.png" alt="img"></p>
-<h4 id="lda-as-a-dimensionality-reduction-technique">LDA as a dimensionality reduction technique</h4>
+<h4 id="fisher-iris-example">Fisher Iris Example</h4>
+<p><img src="/images/qda_vs_lda.png" alt="img"></p>
+<p>Code for this was taken from: <a href="https://scikit-learn.org/stable/auto_examples/classification/plot_lda_qda.html#sphx-glr-auto-examples-classification-plot-lda-qda-py">https://scikit-learn.org/stable/auto_examples/classification/plot_lda_qda.html#sphx-glr-auto-examples-classification-plot-lda-qda-py</a></p>
+<h4 id="side-note-lda-as-a-dimensionality-reduction-technique">Side Note: LDA as a dimensionality reduction technique</h4>
 <p>In Fisher&rsquo;s article he observes that at the decision boundary (discriminant = 0), the ratio of between and within class
 variance is:</p>
 <div>
@@ -309,6 +307,20 @@ variance is:</p>
 </div>
 <p>The simple interpretation of this is that, the dicision boundary has a slope which is equal to the direction of maximum $\Phi$.</p>
 <p>The use LDA as a dimensionality reduction technique all you have to do is map the data onto the first $k$ principal axes of the $\Phi$. (Later on we will have a look at other similar dimensionality reduction technique such as PCA)</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>We&rsquo;ve looked at two variants of parametric generative algorithms to predict flower species from petal / sepal lengths. For our small test example lda and qda were quite alright, but it&rsquo;s good to know what the limitations are.</p>
+<h3 id="qda-assumptionslimitations">QDA assumptions/limitations:</h3>
+<ul>
+<li>It assumes the PDF of the class conditional distributions can be modelled by a Gaussian.</li>
+<li>The decision boundary generated by QDA is quadratic.</li>
+<li>It uses Bayes' rule to get from class conditional distributions to posterior distribution and to achieve this the class priors are used. So for datasets with imbalanced example count per class this can induce a bias for a specific class with a higher example count.</li>
+</ul>
+<h3 id="lda-assumptionslimitations">LDA assumptions/limitations:</h3>
+<ul>
+<li>Like Qda, it assumes the PDF of the class conditional distributions can be modelled by a Gaussian, but it goes one step further by assuming that all classes share a PDF with the same covariance matrix.</li>
+<li>The decision boundary generated by LDA is linear.</li>
+<li>It uses Bayes' rule to get from class conditional distributions to posterior distribution and to achieve this the class priors are used. So for datasets with imbalanced example count per class this can induce a bias for a specific class with a higher example count.</li>
+</ul>
 
         </div>
         

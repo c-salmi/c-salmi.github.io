@@ -8,7 +8,16 @@
     <language>en</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;C. Wang&lt;/a&gt; and &lt;a href=&#34;https://www.ruiqima.com/&#34;&gt;R. Ma&lt;/a&gt;
 </copyright>
-    <lastBuildDate>Mon, 17 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Formula student driverless</title>
+      <link>/posts/9-robot-experiment/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/9-robot-experiment/</guid>
+      <description>What is formula student? Studying at the Mechanical Engineering building at the TU Delft, formula student is a well known term. In Delft, every year a group of highly motivated students put their studies on hold to build a race car completely from scratch! They don&amp;rsquo;t just build it for the heck of it, but the goal is to make a better car than competing univserities throughout the world and win first place in multiple student engineering competitions.</description>
+    </item>
+    
     <item>
       <title>Generalized Linear Models</title>
       <link>/posts/7-generalized-linear-models/</link>
@@ -56,7 +65,7 @@ The Naive Bayes classifier will therefore make a very strong assumption. All $x_
       <pubDate>Sun, 22 Dec 2019 20:24:51 +0100</pubDate>
       
       <guid>/posts/3-non-parmetric-algorithms/</guid>
-      <description>As we have seen with the QDA and LDA classifiers, it is possible to obtain the posterior probabilities by estimating the class conditional probabilities using a (multivariate) Gaussian distribution. Here we estimated the parameters of the Gaussian distribution, $\mu$ and $\Sigma$ based on set of (unbiased) examples.
+      <description>As we have seen with the QDA and LDA classifiers, it is possible to obtain the posterior probabilities by estimating the class conditional probabilities using a (multivariate) Gaussian distribution. And we estimated the parameters of the Gaussian distribution, $\mu$ and $\Sigma$ based on set of (unbiased) examples.
 Instead of using this parametric approach, it is also possible to estimate the class conditional probabilities using Kernel density estimation
 Kernel density estimation: Here the main idea is that you approximate the distribution by a mixture of continuous distributions called kernels.</description>
     </item>
@@ -67,10 +76,7 @@ Kernel density estimation: Here the main idea is that you approximate the distri
       <pubDate>Fri, 20 Dec 2019 20:24:51 +0100</pubDate>
       
       <guid>/posts/2-gaussian-discriminative-analysis/</guid>
-      <description>The Gaussian discriminate analysis is a generative learning algorithm which models the PDF using a (multivariate) Gaussian distribution. This class of density estimation is also called parametric density estimation.
-Parametric Density Estimation: To get an idea of the underlying distribution of the features we try to estimate this distribution based on a formula with parameters. Most commenly used formula for parametric density estimation is the Gaussian distribution:
-1D Gaussian
- \[\begin{aligned} \mathcal{N}(\mu, \sigma^{2}) = \dfrac{1}{\sigma \sqrt{2\pi}} \exp{(-\dfrac{1}{2} ( \dfrac{x-\mu}{\sigma})^{2})} \end{aligned}\]  Multivariate Gaussian</description>
+      <description>If I sample many many apples from a basket of independent identically distributed (i.i.d.) randomly sized appels, the distribution of the size of my apples will converge towards the Gaussian distribution. This is what Laplace came up with in 1812, in his “Analytic Theory of Probability”. Although Carl Friedrich Gauss 3 years before that already introduced the function and worked out the least squares approximation to estimate the &amp;lsquo;true&amp;rsquo; (mean) value from a bunch of i.</description>
     </item>
     
     <item>
@@ -79,16 +85,8 @@ Parametric Density Estimation: To get an idea of the underlying distribution of 
       <pubDate>Sun, 24 Nov 2019 20:24:51 +0100</pubDate>
       
       <guid>/posts/1-machine-learning/</guid>
-      <description>A big part of machine learning consist of the detection of patterns in data. A dataset is represented as a collection of features. For example a dataset about fruits could contain features about color, volume, weight and so on. By detecting the patterns in the features, objects in the dataset can be classified as belonging to a certain class. For example in the fruits dataset each fruit object can be classified as apple, banana, peer and so on.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/posts/8-support-vector-machines/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/8-support-vector-machines/</guid>
-      <description></description>
+      <description>Hello world, this is the first in a series of posts about machine learning. I&amp;rsquo;m mostly making these posts for fun and to go through the basics again, wipe away the dust. I aspire to always think from first principles, so knowing the first principles might come in handy some time.
+So lets talk about machine learning &amp;hellip; Machin learning basically consists of the detection of pattern in data. Data usually refers to a collection of features and classes.</description>
     </item>
     
   </channel>
