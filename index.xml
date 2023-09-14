@@ -6,7 +6,7 @@
     <description>Recent content on ME</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>&amp;copy; 2021 &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;C. Wang&lt;/a&gt; and &lt;a href=&#34;https://www.ruiqima.com/&#34;&gt;R. Ma&lt;/a&gt;
+    <copyright>&amp;copy; 2021 &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;WANG Chucheng&lt;/a&gt; and &lt;a href=&#34;https://www.ruiqima.com/&#34;&gt;MA Ruiqi&lt;/a&gt;
 </copyright>
     <lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -27,7 +27,7 @@
       <description>In my previous posts I have talked about linear and logistic regression. Today I will talk about the broader family of models to which both methods belong Generalized Linear Models. To work our way up to GLMs, we will begin by defining the exponential family.
 The exponential family: A class of distributions is in the exponential family if it can be written in the form:
 $$ p(y;\eta) = b(y) \text{exp}(\eta^T T(y) - \alpha(\eta)) $$
- More information can be found here</description>
+More information can be found here</description>
     </item>
     
     <item>
@@ -37,7 +37,7 @@ $$ p(y;\eta) = b(y) \text{exp}(\eta^T T(y) - \alpha(\eta)) $$
       
       <guid>/posts/6-logistic-regression/</guid>
       <description>Logistic regression Logistic regression unlike linear regression is well suited for classification type problems. The difference lies in the way data is fitted, instead of a linear (hyper)plane it is fitted using the following exponential function (also known as the sigmoid function):
- \[\begin{aligned} h_{\theta}(x) = \dfrac{1}{1 + \exp{(-\theta^Tx)}} \end{aligned}\]  This function has the nice property that, its output is bound between zero and one. This is a usefull property when trying to model the (posterior) probability of something.</description>
+\[\begin{aligned} h_{\theta}(x) = \dfrac{1}{1 + \exp{(-\theta^Tx)}} \end{aligned}\] This function has the nice property that, its output is bound between zero and one. This is a usefull property when trying to model the (posterior) probability of something.</description>
     </item>
     
     <item>
@@ -76,7 +76,7 @@ Kernel density estimation: Here the main idea is that you approximate the distri
       <pubDate>Fri, 20 Dec 2019 20:24:51 +0100</pubDate>
       
       <guid>/posts/2-gaussian-discriminative-analysis/</guid>
-      <description>If I sample many many apples from a basket of independent identically distributed (i.i.d.) randomly sized appels, the distribution of the size of my apples will converge towards the Gaussian distribution. This is what Laplace came up with in 1812, in his “Analytic Theory of Probability”. Although Carl Friedrich Gauss 3 years before that already introduced the function and worked out the least squares approximation to estimate the &amp;lsquo;true&amp;rsquo; (mean) value from a bunch of i.</description>
+      <description>If I sample many many apples from a basket of independent identically distributed (i.i.d.) randomly sized appels, the distribution of the size of my apples will converge towards the Gaussian distribution. This is what Laplace came up with in 1812, in his “Analytic Theory of Probability”. Although Carl Friedrich Gauss 3 years before that already introduced the function and worked out the least squares approximation to estimate the &amp;rsquo;true&amp;rsquo; (mean) value from a bunch of i.</description>
     </item>
     
     <item>
